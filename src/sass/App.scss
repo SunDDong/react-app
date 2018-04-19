@@ -1,8 +1,6 @@
 .navbar {
   font-size: 18px;
-  a:hover, a:visited, a:link, a:active {
-    text-decoration: none;
-  }
+  margin-bottom: 0;
   ul {
     margin-bottom: 0;
     height: 50px;
@@ -12,16 +10,30 @@
     li {
       list-style: none;
       float: right;
-      a{
+      a {
         color: #9d9d9d;
         float: right;
         height: 50px;
         padding: 15px 15px;
         line-height: 20px;
-        &:hover{
+        &:hover {
           color: #ffffff;
         }
       }
     }
   }
+}
+.navbar-fixed-top{
+  position: static;
+}
+.dd-footer{
+  background: #ffffff;
+  padding: 15px;
+  color: #444444;
+  border-top:1px solid #EDEDED;
+  font-weight: lighter;
+  text-align: center;
+}
+.dd-section{
+  min-height: 610px;
 }
