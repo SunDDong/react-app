@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
-import { Grid, Navbar, Jumbotron, Button, Nav, NavItem} from 'react-bootstrap';
+import React, {Component} from 'react';
+import {Grid, Navbar, Jumbotron, Button} from 'react-bootstrap';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
     render() {
         return (
             <div>
-                <Navbar inverse fixedTop>
-                    <Grid>
-                        <Navbar.Header>
-                            <Navbar.Brand>
-                                <a href="/">React App</a>
-                            </Navbar.Brand>
-                            <Navbar.Toggle />
-                        </Navbar.Header>
-                        <Nav bsStyle="pills" activeKey={1}>
-                            <NavItem eventKey={1} href="/home">导航条目 1 的内容</NavItem>
-                            <NavItem eventKey={2} title="Item">导航条目 2 的内容</NavItem>
-                            <NavItem eventKey={3} disabled>导航条目 3 的内容</NavItem>
-                        </Nav>
-                    </Grid>
-                </Navbar>
+                <Router>
+                    <Navbar inverse fixedTop>
+                        <Grid>
+                            <Navbar.Header>
+                                <Navbar.Brand>
+                                    <Link to="/">风月有梦</Link>
+                                </Navbar.Brand>
+                                <Navbar.Toggle />
+                            </Navbar.Header>
+                            <ul>
+                                <li><Link to="/dictionary">目录</Link></li>
+                                <li><Link to="/about">关于</Link></li>
+                            </ul>
+                        </Grid>
+                    </Navbar>
+                </Router>
                 <Jumbotron>
                     <Grid>
                         <h1>Welcome to React</h1>
